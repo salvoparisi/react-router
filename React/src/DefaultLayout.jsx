@@ -8,7 +8,7 @@ function DefaultLayout() {
                 <h2>Logo</h2>
                 <MainMenu />
             </header>
-            <main>
+            <main className="container">
                 <Outlet />
             </main>
             <footer>
