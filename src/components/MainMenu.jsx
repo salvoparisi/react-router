@@ -4,9 +4,9 @@ function MainMenu() {
     return (
         <nav>
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/posts">Posts</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contacts">Contacts</NavLink>
-            <NavLink to="/books">Books</NavLink>
         </nav>
     )
 }
