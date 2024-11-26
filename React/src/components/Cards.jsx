@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 
 function Cards({ addToList, url, list }) {
@@ -22,7 +23,9 @@ function Cards({ addToList, url, list }) {
                         >
                             Delete
                         </button>
-                        <img src={obj.image} alt="" className="img-fluid" />
+                        <Link className='imgLink' to={`/posts/${obj.id}`}>
+                            <img src={obj.image} alt="" className="img-fluid" />
+                        </Link>
                         <h3>{obj.title}</h3>
                         <p className="min-h">{obj.description}</p>
                         <div className="d-flex justify-content-between align-items-center mt-2">

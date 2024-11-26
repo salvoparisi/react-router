@@ -6,8 +6,8 @@ import Cards from '../components/Cards.jsx'
 function Posts() {
     const [list, setList] = useState([]);
 
-    const url = "http://localhost:3000";
 
+    const url = "http://localhost:3000";
     const fetchData = () => {
         fetch(url)
             .then((response) => response.json())

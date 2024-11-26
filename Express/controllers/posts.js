@@ -18,6 +18,14 @@ const show = (req, res) => {
     res.json(posts);
 };
 
+const showone = (req, res) => {
+    posts = getPosts();
+    const single = posts.filter(post => post.id === req.params.id)
+    console.log(single);
+
+    res.json(single)
+}
+
 const store = (req, res) => {
     posts = getPosts();
     num = posts.length + ""
@@ -66,6 +74,7 @@ const destroy = (req, res) => {
 
 module.exports = {
     show,
+    showone,
     store,
     update,
     destroy,

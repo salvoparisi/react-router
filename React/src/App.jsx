@@ -4,6 +4,7 @@ import Posts from "./pages/Posts.jsx";
 import About from "./pages/About.jsx";
 import Contacts from "./pages/Contacts.jsx";
 import DefaultLayout from "./DefaultLayout.jsx";
+import PostLayout from './PostLayout.jsx'
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/posts" element={<Posts />} />
+            <Route path="/posts">
+              <Route index element={<Posts />} />
+              <Route path=":id" element={<PostLayout />} />
+            </Route>
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
           </Route>

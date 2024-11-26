@@ -18,6 +18,7 @@ app.use('/', (req, res, next) => {
 */
 
 app.get('/', postController.show)
+app.get('/:id', postController.showone)
 app.post('/', postController.store)
 app.put('/:id', postController.update)
 app.delete('/:id', postController.destroy)

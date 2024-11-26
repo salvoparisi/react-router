@@ -37,6 +37,10 @@ a {
     padding: 10px;
 }
 
+.imgLink {
+    padding: 0;
+}
+
 main {
     padding-left: 10px;
 }
