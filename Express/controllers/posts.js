@@ -21,9 +21,9 @@ const show = (req, res) => {
 const showone = (req, res) => {
     posts = getPosts();
     const single = posts.filter(post => post.id === req.params.id)
-    console.log(single);
+    singleObj = single[0]
 
-    res.json(single)
+    res.json(singleObj)
 }
 
 const store = (req, res) => {
