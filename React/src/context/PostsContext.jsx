@@ -11,7 +11,7 @@ export const PostsProvider = ({ children }) => {
     const deletePost = (id) => setPosts((prevPosts) => prevPosts.filter((post) => post.id !== id));
 
     return (
-        <PostsContext.Provider value={{ posts, setPosts, addPost, deletePost }}>
+        <PostsContext.Provider key={posts.id} value={{ posts, setPosts, addPost, deletePost }}>
             {children}
         </PostsContext.Provider>
     );

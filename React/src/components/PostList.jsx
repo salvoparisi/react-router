@@ -17,7 +17,7 @@ function PostsList() {
                     ? posts.map((post) => (
                         <PostCard key={post.id} post={post} />
                     ))
-                    : <p>loading...</p>}
+                    : <p>Add some Cards</p>}
             </div>
         </>
     );
