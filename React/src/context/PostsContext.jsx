@@ -5,7 +5,9 @@ export const PostsContext = createContext();
 export const PostsProvider = ({ children }) => {
     const [posts, setPosts] = useState([]);
 
-    const addPost = (newPost) => setPosts((prevPosts) => [newPost, ...prevPosts]);
+    const addPost = (newPost) => {
+        setPosts(newPost)
+    }
     const deletePost = (id) => setPosts((prevPosts) => prevPosts.filter((post) => post.id !== id));
 
     return (
